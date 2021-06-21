@@ -33,7 +33,7 @@ const App = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(amountEl.current.value+" "+categoryEl.current.value);
     const request = await fetch(`https://opentdb.com/api.php?amount=${amountEl.current.value}&categoty=${categoryEl.current.value}`);
       const data = await request.json();  
       
